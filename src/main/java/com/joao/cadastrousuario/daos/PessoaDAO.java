@@ -5,7 +5,6 @@ import com.joao.cadastrousuario.enums.TipoDocumento;
 import com.joao.cadastrousuario.exceptions.RegraDeNegocioVioladaException;
 import com.joao.cadastrousuario.entities.Pessoa;
 import com.joao.cadastrousuario.exceptions.DBException;
-import com.joao.cadastrousuario.repository.PessoaRepositoryInterface;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,8 +12,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import com.joao.cadastrousuario.daointerfaces.PessoaDAOInterface;
 
-public class PessoaDAO implements PessoaRepositoryInterface {
+public class PessoaDAO implements PessoaDAOInterface {
 
     private Connection conn;
 

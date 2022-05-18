@@ -3,15 +3,15 @@ package com.joao.cadastrousuario.services;
 import com.joao.cadastrousuario.entities.Usuario;
 import com.joao.cadastrousuario.exceptions.DBException;
 import com.joao.cadastrousuario.exceptions.RegraDeNegocioVioladaException;
-import com.joao.cadastrousuario.repository.UsuarioRepositoryInterface;
 import java.sql.SQLException;
 import java.util.List;
+import com.joao.cadastrousuario.daointerfaces.UsuarioDAOInterface;
 
 public class UsuarioService {
 
-    private UsuarioRepositoryInterface usuarioDAO;
+    private UsuarioDAOInterface usuarioDAO;
 
-    public UsuarioService(UsuarioRepositoryInterface usuarioDAO) {
+    public UsuarioService(UsuarioDAOInterface usuarioDAO) {
         this.usuarioDAO = usuarioDAO;
     }
 

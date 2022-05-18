@@ -3,15 +3,15 @@ package com.joao.cadastrousuario.services;
 import com.joao.cadastrousuario.exceptions.RegraDeNegocioVioladaException;
 import com.joao.cadastrousuario.entities.Pessoa;
 import com.joao.cadastrousuario.enums.TipoDocumento;
-import com.joao.cadastrousuario.repository.PessoaRepositoryInterface;
 import java.util.List;
 import java.util.Optional;
+import com.joao.cadastrousuario.daointerfaces.PessoaDAOInterface;
 
 public class PessoaService {
 
-    private PessoaRepositoryInterface pessoaDAO;
+    private PessoaDAOInterface pessoaDAO;
 
-    public PessoaService(PessoaRepositoryInterface pessoaDAO) {
+    public PessoaService(PessoaDAOInterface pessoaDAO) {
         this.pessoaDAO = pessoaDAO;
     }
 
@@ -75,7 +75,7 @@ public class PessoaService {
         }
     }
 
-    public PessoaRepositoryInterface getPessoaDAO() {
+    public PessoaDAOInterface getPessoaDAO() {
         return pessoaDAO;
     }
 }

@@ -6,7 +6,6 @@ import com.joao.cadastrousuario.entities.Usuario;
 import com.joao.cadastrousuario.enums.TipoDocumento;
 import com.joao.cadastrousuario.exceptions.DBException;
 import com.joao.cadastrousuario.exceptions.RegraDeNegocioVioladaException;
-import com.joao.cadastrousuario.repository.UsuarioRepositoryInterface;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,8 +13,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import com.joao.cadastrousuario.daointerfaces.UsuarioDAOInterface;
 
-public class UsuarioDAO implements UsuarioRepositoryInterface {
+public class UsuarioDAO implements UsuarioDAOInterface {
 
     private Connection conn;
 
